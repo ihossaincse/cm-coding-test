@@ -1,0 +1,11 @@
+.header {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 15px;
+}
+.header__logo {
+  padding: 25px 0;
+}
+.header__title {
+  border-top: 1px solid #e3e3e3;
+  padding: 10px 0;
+}
