@@ -1,10 +1,8 @@
-// Import the functions you need from the SDKs you need
-//import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/storage";
 
-// Your web app's Firebase configuration
-/* const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyCbwQ3KcOgeSSVk98-oSSqgbaqSvT_UfEQ",
   authDomain: "crediblemind-exam.firebaseapp.com",
   projectId: "crediblemind-exam",
@@ -13,5 +11,9 @@
   appId: "1:856175528326:web:2fac1e7333a8d9b34a0407",
 };
 
-const app = initializeApp(firebaseConfig);
-*/
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+const storageRef = firebase.storage();
+
+export { db, storageRef };
