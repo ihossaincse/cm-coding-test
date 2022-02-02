@@ -1,5 +1,9 @@
 import { createClient } from "contentful";
 
+interface Item {
+  [item: string]: any;
+}
+
 const client = createClient({
   space: "x0aigtiomhhn",
   accessToken: "HoK3JaEhoUdiL2xUx6bKCfyhwHmn-FJ6HLavstAUPZY",
@@ -16,7 +20,7 @@ export async function fetchEntries() {
   }
   let data = entries.items.filter(
     () =>
-      function (item = "") {
+      function (item: Item) {
         return item.sys.contentType.sys.id === "newsConfig";
       }
   );
