@@ -34,7 +34,7 @@ const Home = ({ contentServiceData }) => {
     }
     getAlgolia();
   }, [search]);
-  console.log(algoliaSearch);
+
   return (
     <div>
       <Header contentServiceData={contentService} />
