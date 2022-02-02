@@ -16,7 +16,7 @@ export async function fetchEntries() {
   }
   let data = entries.items.filter(
     () =>
-      function (item) {
+      function (item = "") {
         return item.sys.contentType.sys.id === "newsConfig";
       }
   );
